@@ -1,4 +1,3 @@
-
 // Place the following code in a file and call it AppController.j  Works as a replacement file for the same file AppController.j in the sample code downloadeable here: http://www.cappuccino-project.org/#download
 
 
@@ -141,6 +140,8 @@ var IconDragType = "IconDragType";
 {
     // called when the release image has been removed from the screen; signaling the reciever to import the pasteboard
     // Return YES accepts the pasteboard data; NO declines the pasteboard data.
+
+    // see this link to get your data from CPDraggingInfo:  http://www.cappuccino-project.org/learn/documentation/interface_c_p_dragging_info.html
     console.log("performDragOperation:");
     return YES;
 }
