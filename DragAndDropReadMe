@@ -1,0 +1,37 @@
+Drag and Drop in Cappuccino
+
+In a nutshell, a drag and drop operation is dragging a CPView and dropping it onto another CPView.   All CPViews residing inside the dragging CPView will go with it.
+
+The CPView being dragged is the Source view.  The CPView where the drop occurs is the Destination view.
+
+A CPView may be dropped in several places:
+    - in a view in the same window
+    - in a view in another window
+    - or dropped inside the same view in which it came from (or any of it's parent views)
+
+Below are the requirements for what must be done to make a view dragable and a view droppable.  They may not make sense by a newcomer reading but see the example code that will show you how you fullfill these requirements.
+
+Requirements For Making A CPView Draggable:
+
+1.  One method makes a CPView draggeable and it must be implemented in the Source CPView subclass:
+
+    -(void)mouseDragged:(CPEvent)anEvent
+
+2.  A CPPasteboard object must be created with the type of drag operation that the Destination view wants to accept.
+
+
+Requirements For Making A CPView Draggable:
+
+1.  Two methods must be implemented in the Destination CPView subclass in order to allow it to take a dragged CPView:
+
+    -(BOOL)prepareForDragOperation:(CPDraggingInfo)aSender
+    -(BOOL)performDragOperation:(CPDraggingInfo)aSender
+
+2.  The CPView taking a dragged view must Register itself with the type of drag operation it wants to accept.
+
+
+Note about Registering:  Only CPView may be registerable, not CPWindows.
+
+
+
+Place the following code in a file and call it AppController.j  Works as a replacement file for the same file AppController.j in the sample code downloadeable here: http://www.cappuccino-project.org/#download
