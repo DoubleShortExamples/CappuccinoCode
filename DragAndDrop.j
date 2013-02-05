@@ -1,4 +1,6 @@
 
+// Place the following code in a file and call it AppController.j  Works as a replacement file for the same file AppController.j in the sample code downloadeable here: http://www.cappuccino-project.org/#download
+
 
 @import <Foundation/CPObject.j>
 
