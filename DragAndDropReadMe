@@ -30,6 +30,6 @@ Requirements For Making A CPView Draggable:
 2.  The CPView taking a dragged view must Register itself with the type of drag operation it wants to accept.
 
 
-Note about Registering:  Only CPView may be registerable, not CPWindows.
+Note about Registering:  Only CPView may be registerable and so are CPWindows.
 
 Now take this knowledge and see how it's implemented in DragAndDrop.j file.  Only then can it make sense.
